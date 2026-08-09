@@ -9,7 +9,7 @@ pre: " <b> 4. </b> "
 During my internship, I attended two events and planned to participate in another workshop on **August 8, 2026**. The two completed events provided useful knowledge and practical experience, while the upcoming workshop offered an opportunity to learn more about **Amazon Bedrock AgentCore**.
 
 ### [Event 1](4.1-Event1/)
-&emsp;**Event name:** Cloud Architect
+&emsp;**Event Name:** Cloud Architect
 
 &emsp;**Date:** June 20, 2026
 
@@ -18,9 +18,9 @@ During my internship, I attended two events and planned to participate in anothe
 
 
 ### [Event 2](4.2-Event2/)
-&emsp;**Event name:** Cloud Architect x Meet up 11/07
+&emsp;**Event Name:** FCAJ x Agentic AI Build Week powered by GenAI Fund
 
-&emsp;**Date:** July 11, 2026
+&emsp;**Date:** July 25, 2026
 
 &emsp;**Location:** AWS Office, Ho Chi Minh City
 

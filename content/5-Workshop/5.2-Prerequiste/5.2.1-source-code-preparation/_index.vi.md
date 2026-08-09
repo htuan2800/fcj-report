@@ -12,7 +12,7 @@ pre : " <b> 5.2.1. </b> "
 * Chọn **Code** → **HTTPS**.
 * Sao chép URL của kho lưu trữ.
 
-![github](/images/5-Workshop/5.2-Prerequisite/sourceCode.png)
+![github](/fcj-report/images/5-Workshop/5.2-Prerequisite/sourceCode.png)
 
 ### 2. Sao chép (Clone) mã nguồn về máy tính
 
@@ -23,4 +23,4 @@ pre : " <b> 5.2.1. </b> "
 git clone https://github.com/THL2410/SmartDocs.git
 ```
 
-![terminal](/images/5-Workshop/5.2-Prerequisite/terminalClone.png)
+![terminal](/fcj-report/images/5-Workshop/5.2-Prerequisite/terminalClone.png)

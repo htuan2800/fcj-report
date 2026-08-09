@@ -1,98 +1,71 @@
 ---
 title: "Event 2"
-date: 2026-07-11
-weight: 2
+date: 2024-01-01
+weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# Bài thu hoạch “Cloud Architect x Meet up 11/07”
-
-### Thông Tin Sự Kiện
-
-- **Tên sự kiện:** Cloud Architect x Meet up 11/07
-- **Thời gian:** Ngày 11/07/2026
-- **Địa điểm:** Văn phòng AWS, TP. Hồ Chí Minh
-- **Vai trò:** Người tham dự
+# Agentic AI Build Week powered by GenAI Fund
 
 ### Mục Đích Của Sự Kiện
 
-- Theo dõi phần thi đấu của hai đội còn lại là **KLKAT** và **Ngũ Đại Hiệp**
-- Học hỏi kinh nghiệm và các mẹo làm bài thi chứng chỉ AWS
-- Tìm hiểu về **Frontier Agent** và khả năng ứng dụng AI agent trong lĩnh vực bảo mật
-- Giao lưu và kết nối với cộng đồng yêu thích kiến trúc cloud và công nghệ AWS
+- Tổng kết một hackathon quy mô lớn (FCAJ x Agentic AI Build Week) với nhiều đội thi (2K, Six Piller, One Team, Long & Co, và các đội khác)
+- Tạo sân khấu để các đội demo và pitch sản phẩm Agentic AI làm trên nền tảng AWS
+- Chia sẻ những bài học "xương máu" từ 24 giờ làm hackathon — teamwork, kỹ năng pitching, và các câu chuyện kỹ thuật thực tế
+- Giúp người tham gia có dự án đẹp cho hồ sơ (CV) và kết nối với cộng đồng AWS Study Group
+
+### Danh Sách Diễn Giả
+
+- **One Team** – làm chatbot đặt đồ ăn kiểu Zalo, tập trung vào giao diện hội thoại dễ dùng cho người không rành công nghệ
+- **Long & Co** – làm trợ lý AI cho Solution Architect, biến yêu cầu ngôn ngữ tự nhiên thành sơ đồ kiến trúc, dự toán chi phí và IaC có thể deploy
+- **Nhóm 2K** – làm hệ thống giám sát đám đông real-time bằng computer vision kết hợp agentic AI copilot
+- **Six Piller** – làm Adaptive Workflow Engine hỗ trợ phân loại case phòng chống rửa tiền (AML)
 
 ### Nội Dung Nổi Bật
 
-#### Phần thi đấu giữa KLKAT và Ngũ Đại Hiệp
+#### One Team – chatbot đặt đồ ăn qua hội thoại
+- Bỏ qua việc làm hẳn một app phức tạp, chọn giao diện chat tối giản kiểu Zalo để người không rành công nghệ không phải học cách dùng app mới.
+- Dùng prompt ngôn ngữ tự nhiên thay vì bấm chọn món, để AI tự suy luận ý định người dùng — không cần đăng ký tài khoản.
+- Demo trên một bộ dữ liệu doanh nghiệp mô phỏng (kịch bản kiểu FPT) để cho thấy agent có thể truy vấn dữ liệu cấu trúc (mã số thuế, doanh thu theo quý) và đưa ra đề xuất.
+- Bài học lớn nhất của nhóm: công nghệ dù xịn đến đâu cũng phải bị giới hạn bởi nghiệp vụ thực tế, và việc đưa MVP lên production sớm quan trọng hơn là chỉ dừng ở lý thuyết.
 
-Một trong những hoạt động chính của sự kiện là phần thi đấu của hai đội còn lại: **KLKAT** và **Ngũ Đại Hiệp**. Qua phần trình bày và tranh tài của hai đội, em có cơ hội quan sát cách các thành viên phối hợp, phân tích yêu cầu và đưa ra giải pháp trong thời gian giới hạn. Hoạt động này tạo không khí sôi nổi cho sự kiện, đồng thời cho thấy vai trò quan trọng của tư duy logic, khả năng làm việc nhóm và kỹ năng trình bày một giải pháp kỹ thuật.
+#### Long & Co – trợ lý AI cho Solution Architect
+- Giải quyết đúng nỗi đau của SA: phải thiết kế kiến trúc, dự toán chi phí và triển khai hệ thống trong thời gian cực ngắn (có khi chỉ một buổi tối), trong khi vẽ tay trên Draw.io và viết IaC thủ công tốn rất nhiều thời gian.
+- Flow xử lý: yêu cầu bằng ngôn ngữ tự nhiên + tài liệu nội bộ → AI vẽ sơ đồ kiến trúc → tính chi phí AWS dự kiến → sinh code Terraform/CloudFormation → con người xem xét và duyệt → hệ thống tự động deploy.
+- Cái khó theo nhóm chia sẻ không nằm ở việc vẽ sơ đồ, mà ở việc quản lý context/memory của AI để kiến trúc luôn nhất quán với quy tắc nội bộ (ví dụ: Lambda phải nằm trong VPC), và validate output theo danh sách dịch vụ được phép dùng ở mỗi lần chạy.
+- Giữ phạm vi ở mức proof-of-concept có thể chứng minh được, với UI hiển thị từng bước để ban giám khảo theo dõi flow suy luận của agent theo thời gian thực.
 
-#### Tips & Tricks khi thi các chứng chỉ AWS
+#### Nhóm 2K – giám sát đám đông real-time
+- Pipeline: camera đẩy dữ liệu qua Amazon Kinesis Video Streams → container chạy trên AWS Fargate dùng YOLO để phát hiện người và ByteTrack để theo dõi (tránh đếm trùng hoặc bỏ sót) → dữ liệu mật độ lưu ở DynamoDB và S3.
+- Lớp agentic AI (Bedrock + OpenAI) cho phép người vận hành hỏi hệ thống bằng ngôn ngữ tự nhiên để tóm tắt tình trạng khu vực hoặc đề xuất điều phối nhân sự.
+- Tính năng nổi bật: người vận hành có thể tự vẽ các "zone" giám sát trên khung hình (cổng lên máy bay, hàng chờ thanh toán...), hệ thống sẽ cảnh báo đổi màu khi mật độ vượt ngưỡng.
+- Khó khăn kỹ thuật lớn nhất là độ ổn định đường truyền cho xử lý video real-time, và cần camera đặt cố định ở góc cao để đếm zone chính xác.
 
-Diễn giả chia sẻ một số kinh nghiệm thực tế có thể áp dụng khi ôn tập và làm bài thi chứng chỉ AWS:
+#### Six Piller – Adaptive Workflow Engine chống rửa tiền
+- Mục tiêu thay thế quy trình tra cứu thủ công tốn khoảng 20–25 USD và 3 giờ mỗi ca, dễ khiến chuyên viên phân tích bị "burn-out".
+- Pipeline 3 lớp: Lớp 1 chấm điểm rủi ro (0–1) theo thời gian thực qua Kinesis Data Streams + XGBoost trên Amazon Bedrock; Lớp 2 dùng AWS Step Functions điều phối các agent chuyên trách (KYC, phân tích giao dịch, xây dựng bằng chứng) để tổng hợp file bằng chứng; Lớp 3 phân loại case thành Hold, Dismiss, hoặc Escalate cho con người xử lý.
+- Triết lý thiết kế: AI là "cánh tay phải" chứ không thay thế con người do tính nhạy cảm của tài chính — toàn bộ logic suy luận và bằng chứng đều được ghi lại để phục vụ audit, và hệ thống giúp một chuyên viên xử lý được nhiều case hơn.
 
-- **Sử dụng kỹ thuật loại trừ:** Loại bỏ trước các đáp án sai rõ ràng hoặc không liên quan để thu hẹp phạm vi lựa chọn.
-- **Không suy diễn quá phức tạp:** Cần bám sát yêu cầu của câu hỏi và ưu tiên giải pháp đơn giản, trực tiếp, đáp ứng đúng mục tiêu.
-- **Đọc kỹ từ khóa:** Đặc biệt chú ý các từ như **“NOT”**, **“LEAST”** hoặc các cụm từ có thể làm thay đổi hoàn toàn yêu cầu của câu hỏi.
-- **Nắm bản chất dịch vụ:** Hiểu mục đích, đặc điểm và trường hợp sử dụng của từng dịch vụ AWS sẽ hiệu quả hơn việc chỉ ghi nhớ đáp án.
-
-#### Meet the Frontier Agent
-
-Phần “Meet the Frontier Agent” giới thiệu một AI agent dành cho các tác vụ bảo mật với ba đặc điểm chính:
-
-- **Autonomous Reasoning:** Được vận hành bởi **Amazon Bedrock**, agent có khả năng tự lập kế hoạch và thực hiện các tác vụ bảo mật mà không cần con người can thiệp liên tục.
-- **Full Lifecycle:** Hỗ trợ xuyên suốt nhiều giai đoạn, bao gồm **Design Review**, **Code Security** và **Active Penetration Testing**.
-- **Verifiable Findings:** Khác với chatbot LLM thông thường, agent xác minh lỗ hổng bằng cách thử khai thác thực tế, nhờ đó cung cấp kết quả có thể kiểm chứng.
+#### Bài học từ 24 giờ hackathon
+- Teamwork quan trọng hơn từng dòng code — những đội chia vai trò rõ ràng (backend, frontend, research, presenter) và bỏ được cái tôi cá nhân thường làm nhanh hơn.
+- Ban giám khảo hỏi nhiều trong lúc pitching thực ra là dấu hiệu tốt — chứng tỏ họ quan tâm; xoáy vào pain point thực tế của khách hàng thay vì chỉ khoe công nghệ giúp phần trình bày nổi bật hơn.
+- Các câu chuyện thực tế gồm sự cố hạ tầng, lỡ push file `.env` lên GitHub, thiếu ngủ, và cuống cuồng xử lý khi mạng yếu ngay lúc demo trực tiếp.
+- Lời nhắn của ban tổ chức: đừng quá đặt nặng chuyện thắng thua — giá trị thật nằm ở trải nghiệm (kết nối, học công nghệ mới, thử giới hạn bản thân), và các dự án này cũng là điểm cộng đẹp cho CV sau này.
 
 ### Những Gì Học Được
 
-#### Kỹ Năng Làm Việc Nhóm Và Giải Quyết Vấn Đề
+- Dù thuộc các lĩnh vực rất khác nhau (đặt đồ ăn, kiến trúc cloud, computer vision, AML), điểm chung là các đội đều xuất phát từ một pain point thực tế thay vì chạy theo công nghệ trước.
+- Pattern agentic AI lặp lại nhiều lần: một lớp điều phối (như Step Functions) quản lý các agent chuyên trách, có bước con người duyệt (human-in-the-loop) trước khi làm gì rủi ro, và phải quản lý context/memory để output AI nhất quán.
+- Một hackathon dạy về teamwork và áp lực thời gian không kém gì kỹ thuật — nhiều lời khuyên hay nhất lại đến từ phần "chia sẻ điều gì đã sai" hơn là từ chính phần demo.
+- Phải biết điểm dừng — là người develop nên lúc nào cũng muốn thêm tính năng mới, nâng cấp, làm cho nó tốt hơn, nhưng thời gian thì luôn có hạn, nên biết khi nào nên ngừng lại cũng quan trọng không kém việc biết làm tính năng đó.
 
-- Phần thi đấu giữa KLKAT và Ngũ Đại Hiệp cho thấy một giải pháp tốt cần kết hợp kiến thức kỹ thuật, sự phối hợp giữa các thành viên và cách trình bày rõ ràng.
-- Khi làm việc dưới giới hạn thời gian, cần phân chia nhiệm vụ hợp lý và tập trung vào yêu cầu quan trọng nhất.
+### Ứng Dụng Vào Công Việc
 
-#### Phương Pháp Ôn Thi Chứng Chỉ AWS
+- Cân nhắc thêm bước con người duyệt (human-in-the-loop) trước khi để AI tự thực hiện hành động ảnh hưởng đến hạ tầng hoặc ra quyết định tài chính/bảo mật, giống cách Long & Co và Six Piller thiết kế.
+- Tìm hiểu pattern điều phối (như Step Functions) để quản lý nhiều agent chuyên trách thay vì làm một agent to ôm hết mọi việc.
+- Cân nhắc thời hạn nộp workshop sắp đến hạn, nên bây giờ không thêm tính năng mới nữa, mà tập trung hoàn thiện, chỉnh sửa và làm tốt hơn đối với những tính năng đã có.
 
-- Cần hiểu rõ chức năng và trường hợp sử dụng của các dịch vụ AWS thay vì học thuộc máy móc.
-- Kỹ thuật loại trừ và khả năng nhận diện từ khóa giúp tiết kiệm thời gian, hạn chế lựa chọn sai do đọc thiếu yêu cầu.
-- Việc luyện tập thường xuyên với câu hỏi mẫu giúp làm quen với cách diễn đạt và cấu trúc của đề thi.
+### Trải nghiệm trong event
 
-#### Góc Nhìn Về AI Trong Bảo Mật
-
-- AI agent có thể hỗ trợ từ đánh giá thiết kế, kiểm tra bảo mật mã nguồn đến kiểm thử xâm nhập chủ động.
-- Khả năng tự lập kế hoạch giúp agent xử lý chuỗi tác vụ phức tạp với ít thao tác thủ công hơn.
-- Kết quả bảo mật cần được xác minh bằng bằng chứng thực tế thay vì chỉ dựa vào nội dung do mô hình ngôn ngữ tạo ra.
-
-### Ứng Dụng Vào Học Tập Và Công Việc
-
-- Áp dụng kỹ thuật loại trừ và chú ý từ khóa khi luyện thi các chứng chỉ AWS.
-- Xây dựng kế hoạch học theo từng nhóm dịch vụ, kết hợp kiến thức lý thuyết với bài tập tình huống.
-- Rèn luyện kỹ năng phân tích, phối hợp nhóm và trình bày giải pháp qua các hoạt động thi đấu hoặc workshop.
-- Tìm hiểu thêm về Amazon Bedrock, AI agent và khả năng ứng dụng trong quy trình kiểm thử bảo mật.
-- Luôn kiểm chứng các kết quả do AI cung cấp trước khi sử dụng trong môi trường thực tế.
-
-### Trải Nghiệm Tại Sự Kiện
-
-Tham gia **Cloud Architect x Meet up 11/07** là một trải nghiệm bổ ích và nhiều năng lượng. Phần thi đấu giữa **KLKAT** và **Ngũ Đại Hiệp** giúp em học hỏi thêm về cách làm việc nhóm, xử lý yêu cầu và trình bày giải pháp. Những mẹo thi chứng chỉ AWS mang tính thực tế, có thể áp dụng ngay vào quá trình học và luyện đề.
-
-Nội dung về Frontier Agent cũng mở rộng góc nhìn của em về vai trò của AI trong bảo mật. AI agent không chỉ trả lời câu hỏi mà còn có thể lập kế hoạch, thực hiện tác vụ và xác minh kết quả. Bên cạnh kiến thức chuyên môn, sự kiện còn tạo cơ hội giao lưu với nhiều bạn có cùng định hướng về cloud và AWS.
-
-### Một Số Hình Ảnh Khi Tham Gia Sự Kiện
-
-<figure>
-  <img src="/images/event2_image1.jpeg" alt="Phần thi đấu Cloud Architect giữa hai đội tại văn phòng AWS" style="width: 100%; height: auto;">
-  <figcaption>Phần thi đấu Cloud Architect giữa hai đội KLKAT và Ngũ Đại Hiệp.</figcaption>
-</figure>
-
-<figure>
-  <img src="/images/event2_image3.jpeg" alt="Phần trình bày Meet the Frontier Agent tại sự kiện" style="width: 100%; height: auto;">
-  <figcaption>Phần giới thiệu “Meet the Frontier Agent” và ứng dụng AI agent trong bảo mật.</figcaption>
-</figure>
-
-<figure>
-  <img src="/images/event2_image2.jpeg" alt="Ảnh tập thể tại sự kiện Cloud Architect x Meet up 11/07" style="width: 100%; height: auto;">
-  <figcaption>Ảnh lưu niệm của người tham dự và ban tổ chức tại văn phòng AWS.</figcaption>
-</figure>
-
-> Tổng thể, sự kiện giúp em tích lũy thêm kinh nghiệm về làm việc nhóm, phương pháp ôn thi chứng chỉ AWS và tiềm năng ứng dụng AI agent trong bảo mật phần mềm.
+Đây là buổi tổng kết/demo day của một hackathon chứ không phải buổi chia sẻ kiểu hội thảo, nên gần như cả buổi là 4 đội pitch nối tiếp nhau, sau đó là phần chia sẻ mở về hành trình 24 giờ vừa qua. Tôi chủ yếu ngồi xem phần demo và Q&A — ấn tượng nhất là hệ thống chống rửa tiền của Six Piller và trợ lý kiến trúc của Long & Co, vì cả hai đều thiết kế theo hướng con người vẫn duyệt lại trước khi hành động, thay vì để AI tự động hoàn toàn.

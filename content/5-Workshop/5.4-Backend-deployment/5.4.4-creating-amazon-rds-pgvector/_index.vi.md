@@ -8,12 +8,12 @@ pre: "<b> 5.4.4 </b>"
 ## Khởi tạo RDS PostgreSQL
 
 1. Mở Amazon RDS Console.
-![RDS Available](/images/5-Workshop/5.4-Backend-Deployment/rds.png)
+![RDS Available](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/rds.png)
 2. Chọn **Create database**.
 3. Chọn PostgreSQL, Phương thức Full configration, mẫu Dev/Test.
-![RDS Available](/images/5-Workshop/5.4-Backend-Deployment/rds2.png)
+![RDS Available](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/rds2.png)
 4. Chọn cấu hình phù hợp với môi trường.
-![RDS Available](/images/5-Workshop/5.4-Backend-Deployment/3.png)
+![RDS Available](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/3.png)
 5. Cấu hình
 ```text
 Engine version = PostgreSQL 16.14-R2
@@ -24,15 +24,15 @@ Database authentication = Password authentication
 Instance type = db.t4g.micro
 Storage type = General Purpose SSD (gp3)
 ```
-![RDS Available](/images/5-Workshop/5.4-Backend-Deployment/4.png)
-![RDS Available](/images/5-Workshop/5.4-Backend-Deployment/5.png)
-![RDS Available](/images/5-Workshop/5.4-Backend-Deployment/6.png)
+![RDS Available](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/4.png)
+![RDS Available](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/5.png)
+![RDS Available](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/6.png)
 
 6. Chọn VPC, DB Subnet Group và Security Group đã tạo.
-![RDS Available](/images/5-Workshop/5.4-Backend-Deployment/7.png)
-![RDS Available](/images/5-Workshop/5.4-Backend-Deployment/8.png)
+![RDS Available](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/7.png)
+![RDS Available](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/8.png)
 7. Tạo database và chờ trạng thái **Available**.
-![RDS Available](/images/5-Workshop/5.4-Backend-Deployment/9.png)
+![RDS Available](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/9.png)
 
 ## Lambda khởi tạo database, kích hoạt pgvector
 
@@ -151,4 +151,4 @@ def create_database_objects(cursor: Any) -> None:
     )
 ```
 3. Kết quả commit transaction.
-![pgvector enabled](/images/5-Workshop/5.4-Backend-Deployment/10.png)
+![pgvector enabled](/fcj-report/images/5-Workshop/5.4-Backend-Deployment/10.png)

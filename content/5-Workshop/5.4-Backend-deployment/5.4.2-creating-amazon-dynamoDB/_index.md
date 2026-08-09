@@ -16,9 +16,9 @@ pre: "<b> 5.4.2 </b>"
 1. Open Amazon DynamoDB.
 2. Select **Create table**.
 3. Enter the table name and configure the Partition Key and Sort Key. Ensure the keys for each table are set correctly.
-![DynamoDB table active](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/12.png)
+![DynamoDB table active](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/12.png)
 4. Create the table and wait for the status to become **Active**.
-![DynamoDB table active](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/11.png)
+![DynamoDB table active](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/11.png)
 
 ## Data Design
 
@@ -51,14 +51,14 @@ The tables are designed as follows:
 1. Open the **AWS Management Console**.
 2. Search for and select the **Amazon DynamoDB** service.
 3. In the left-hand menu, select **Tables**.
-![DynamoDB](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/1.png)
+![DynamoDB](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/1.png)
 
 4. Select **Create table**.
 5. Enter the table name in the **Table name** field.
 6. Enter the **Partition key** according to the design for each table.
 7. For the `ChatHistory-dev` table, also enter the **Sort key**:
-![DynamoDB](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/2.png)
-![DynamoDB](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/3.png)
+![DynamoDB](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/2.png)
+![DynamoDB](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/3.png)
 8. Select **Create table**.
 
 
@@ -75,7 +75,7 @@ messageKey
 | `createdAt` | Creation timestamp |
 | `updatedAt` | Update timestamp |
 ```
-![DynamoDB sample item](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/4.png)
+![DynamoDB sample item](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/4.png)
 
 ## Verifying the Table
 
@@ -84,7 +84,7 @@ messageKey
 - Filter by user or chat session.
 - Check message order.
 
-> **Expected result:** Data for each session can be queried and sorted by time. ![DynamoDB explore items](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/5.png)
+> **Expected result:** Data for each session can be queried and sorted by time. ![DynamoDB explore items](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/5.png)
 
 ## Verifying Data
 Verifying DynamoDB data
@@ -92,11 +92,11 @@ Verifying DynamoDB data
 2. Select the table to verify: `ChatHistory-dev`.
 3. Check the settings for `ChatHistory-dev` – Items returned.
 
-![DynamoDB table active](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/13.png)
+![DynamoDB table active](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/13.png)
 
 Verifying RDS data
 1. Open AWS Lambda.
 2. After completing the `rds-init-dev` Lambda function -> Deploy -> Test.
 3. Data = `{}` -> Test.
 
-![DynamoDB table active](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/14.png)
+![DynamoDB table active](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/14.png)

@@ -12,7 +12,7 @@ Having explored the Frontend and Backend architectures separately in the previou
 
 The entire system is deployed using a **serverless** model, organized into four functional layers (blocks) as shown in the architecture diagram:
 
-![](/images/5-Workshop/5.1-Workshop-overview/Structure.jpeg)
+![](/fcj-report/images/5-Workshop/5.1-Workshop-overview/Structure.jpeg)
 
 ##### a. Frontend & API Layer
 

@@ -1,98 +1,71 @@
 ---
 title: "Event 2"
-date: 2026-07-11
-weight: 2
+date: 2024-01-01
+weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# “Cloud Architect x Meet up 11/07” Event Report
-
-### Event Information
-
-- **Event name:** Cloud Architect x Meet up 11/07
-- **Date:** July 11, 2026
-- **Location:** AWS Office, Ho Chi Minh City
-- **Role:** Attendee
+# Agentic AI Build Week powered by GenAI Fund
 
 ### Event Objectives
 
-- Watch the remaining two teams, **KLKAT** and **Ngũ Đại Hiệp**, compete.
-- Learn practical experience and tips for AWS certification exams.
-- Explore the **Frontier Agent** and the potential of AI agents in cybersecurity.
-- Meet and connect with people interested in cloud architecture and AWS technologies.
+- Wrap up a large-scale hackathon (FCAJ x Agentic AI Build Week) with multiple competing teams (2K, Six Piller, One Team, Long & Co, and others)
+- Give teams a stage to demo and pitch their Agentic AI products built on AWS
+- Share hard-earned lessons from a 24-hour hackathon sprint — teamwork, pitching, and technical war stories
+- Help participants walk away with portfolio-worthy projects and connections in the AWS Study Group community
 
-### Event Highlights
+### Speakers
 
-#### Competition Between KLKAT and Ngũ Đại Hiệp
+- **One Team** – built a Zalo-style chatbot for food ordering, focused on a non-tech-friendly conversational UI
+- **Long & Co** – built an AI assistant for Solution Architects that turns natural-language requirements into architecture diagrams, cost estimates, and deployable IaC
+- **Nhóm 2K** – built a real-time crowd-monitoring system using computer vision and an agentic AI copilot
+- **Six Piller** – built an Adaptive Workflow Engine for anti-money-laundering (AML) case triage
 
-One of the event's main activities was the competition between the two remaining teams, **KLKAT** and **Ngũ Đại Hiệp**. By observing their presentations and performance, I saw how team members coordinated, analyzed requirements, and proposed solutions within a limited time. The activity created an energetic atmosphere and demonstrated the importance of logical thinking, teamwork, and the ability to present a technical solution clearly.
+### Key Highlights
 
-#### Tips and Tricks for AWS Certification Exams
+#### One Team – conversational food-ordering chatbot
+- Skipped a full app in favor of a minimal, Zalo-like chat interface so non-tech users don't have to learn new navigation.
+- Used natural-language prompts instead of menu buttons, letting the AI infer intent directly from what the user types — no account registration needed.
+- Demoed against a simulated enterprise dataset (an FPT-style scenario) to show the agent could query structured business data (tax codes, quarterly revenue) and surface suggestions.
+- Team's biggest takeaway: no matter how advanced the tech, it has to stay bounded by the actual business requirement — and shipping an MVP to production beats polishing a theory.
 
-The speaker shared practical advice for preparing for and taking AWS certification exams:
+#### Long & Co – AI assistant for Solution Architects
+- Tackles a real pain point for SAs: designing architecture, estimating cost, and deploying — sometimes in a single evening — while hand-drawn Draw.io diagrams and manually written IaC eat up all the time.
+- Workflow: natural-language request + internal docs → AI drafts an architecture diagram → estimates AWS pricing → generates Terraform/CloudFormation → a human reviews and approves → the system deploys.
+- The hard part, per the team, wasn't the diagram generation — it was managing the AI's context/memory so the architecture stayed consistent with internal rules (e.g., "Lambda must sit inside a VPC") and validating output against an allowed-services list on every run.
+- Kept scope to a provable proof-of-concept with a step-by-step UI so judges could watch the agent's reasoning in real time.
 
-- **Use elimination:** Remove clearly incorrect or irrelevant answers first to narrow the choices.
-- **Avoid overthinking:** Follow the question's requirements and prioritize the simplest direct solution that meets the objective.
-- **Read keywords carefully:** Pay particular attention to words such as **“NOT”** and **“LEAST”**, which can completely change what a question asks.
-- **Understand each service:** Knowing the purpose, characteristics, and use cases of AWS services is more effective than memorizing answers.
+#### Nhóm 2K – real-time crowd monitoring
+- Pipeline: camera feeds into Amazon Kinesis Video Streams → AWS Fargate containers run YOLO for people detection and ByteTrack for tracking (so people aren't double-counted or missed) → density data lands in DynamoDB and S3.
+- An agentic layer (Bedrock + OpenAI) lets operators query the system in plain language for a summary of an area or staffing suggestions.
+- Standout feature: operators can draw custom "zones" on the camera feed (e.g., boarding gates, checkout lines), and the system flags color-coded alerts once a zone's density crosses a threshold.
+- Biggest technical headaches were network stability for real-time video processing and needing a fixed, elevated camera angle for accurate zone counting.
 
-#### Meet the Frontier Agent
+#### Six Piller – AML Adaptive Workflow Engine
+- Aims to replace a manual review process that costs roughly $20–$25 and about 3 hours per case, and that burns out analysts.
+- Three-layer pipeline: Layer 1 does fast risk scoring (0–1) on live transactions via Kinesis Data Streams + XGBoost on Amazon Bedrock; Layer 2 uses AWS Step Functions to orchestrate specialized agents (KYC, transaction analysis, evidence-building) that compile an evidence file; Layer 3 buckets the case as Hold, Dismiss, or Escalate to a human.
+- Design philosophy: AI is a "right hand," not a replacement, given how sensitive financial decisions are — every step of the agent's reasoning and evidence is logged for auditability, and the system lets one analyst handle far more cases than before.
 
-The “Meet the Frontier Agent” session introduced an AI agent for security tasks with three key characteristics:
+#### Lessons from the 24-hour hackathon sprint
+- Teamwork mattered more than any single line of code — teams that split roles clearly (backend, frontend, research, presenter) and dropped individual ego moved faster.
+- Judges asking a lot of questions during pitching is actually a good sign — it means they're engaged; framing the pitch around a real pain point (not just cool tech) helped teams stand out.
+- War stories included infra hiccups, accidentally pushing a `.env` file to GitHub, running on little sleep, and scrambling when the network died mid live-demo.
+- The organizers' closing message: don't over-index on winning — the real value is the experience (networking, learning new tools, testing your own limits), and these projects double as solid portfolio pieces for future job applications.
 
-- **Autonomous Reasoning:** Powered by **Amazon Bedrock**, the agent can independently plan and perform security tasks without continuous human intervention.
-- **Full Lifecycle:** It supports multiple stages, including **Design Review**, **Code Security**, and **Active Penetration Testing**.
-- **Verifiable Findings:** Unlike a conventional LLM chatbot, the agent verifies vulnerabilities through practical exploitation attempts and therefore provides findings that can be validated.
+### Key Takeaways
 
-### What I Learned
+- Across very different domains (food ordering, cloud architecture, computer vision, AML), the common thread was starting from a real pain point instead of leading with the technology.
+- Agentic AI patterns kept showing up: an orchestration layer (Step Functions or similar) coordinating specialized agents, human-in-the-loop checkpoints before anything risky happens, and context/memory management to keep AI output consistent.
+- A hackathon is as much a lesson in teamwork and time pressure as it is a coding exercise — some of the sharpest advice came from the "what went wrong" retrospectives, not the demos themselves.
+- Know when to stop — as a developer I always want to add one more feature or polish things further, but time is limited, and knowing when to stop scope-creeping matters just as much as building the feature in the first place.
 
-#### Teamwork and Problem-Solving
+### Applying to Work
 
-- The competition showed that a strong solution requires technical knowledge, effective coordination, and clear presentation.
-- Under time constraints, teams need to divide responsibilities appropriately and focus on the most important requirements.
-
-#### AWS Certification Preparation
-
-- It is important to understand the functions and use cases of AWS services instead of relying on rote memorization.
-- Elimination techniques and keyword recognition save time and reduce mistakes caused by misreading requirements.
-- Regular practice with sample questions helps learners become familiar with exam wording and structure.
-
-#### AI in Cybersecurity
-
-- AI agents can assist with design reviews, source-code security checks, and active penetration testing.
-- Autonomous planning enables an agent to perform complex sequences of tasks with less manual intervention.
-- Security findings should be verified with practical evidence instead of relying solely on content produced by a language model.
-
-### Application to Study and Work
-
-- Apply elimination techniques and pay attention to keywords when practicing for AWS certifications.
-- Build a study plan by service group and combine theoretical knowledge with scenario-based exercises.
-- Improve analysis, team coordination, and solution-presentation skills through competitions and workshops.
-- Learn more about Amazon Bedrock, AI agents, and their use in security-testing workflows.
-- Always verify AI-generated results before using them in a real environment.
+- Consider adding a human-in-the-loop approval step before any AI-driven action that changes infrastructure or makes a financial/security decision, similar to Long & Co's and Six Piller's designs.
+- Look into an orchestration pattern (like Step Functions) for coordinating multiple specialized agents instead of building one large, do-everything agent.
+- With the workshop submission deadline coming up, hold off on adding new features for now and focus on polishing, fixing, and improving what's already built.
 
 ### Event Experience
 
-Attending **Cloud Architect x Meet up 11/07** was an energetic and valuable experience. The competition between **KLKAT** and **Ngũ Đại Hiệp** taught me more about teamwork, requirement analysis, and solution presentation. The AWS certification tips were practical and could be applied immediately to studying and practicing exam questions.
-
-The Frontier Agent session also broadened my understanding of AI's role in security. An AI agent can do more than answer questions: it can plan, perform tasks, and verify results. In addition to technical knowledge, the event gave me an opportunity to meet many people with similar interests in cloud and AWS.
-
-### Event Photos
-
-<figure>
-  <img src="/images/event2_image1.jpeg" alt="Cloud Architect competition between two teams at the AWS office" style="width: 100%; height: auto;">
-  <figcaption>The Cloud Architect competition between KLKAT and Ngũ Đại Hiệp.</figcaption>
-</figure>
-
-<figure>
-  <img src="/images/event2_image3.jpeg" alt="Meet the Frontier Agent presentation at the event" style="width: 100%; height: auto;">
-  <figcaption>The “Meet the Frontier Agent” presentation and the use of AI agents in cybersecurity.</figcaption>
-</figure>
-
-<figure>
-  <img src="/images/event2_image2.jpeg" alt="Group photo at Cloud Architect x Meet up 11/07" style="width: 100%; height: auto;">
-  <figcaption>A group photo of attendees and organizers at the AWS office.</figcaption>
-</figure>
-
-> Overall, the event helped me gain further experience in teamwork, AWS certification preparation, and the potential application of AI agents in software security.
+This was the closing/demo day of a hackathon rather than a talk-style event, so most of the day was four teams pitching back-to-back, followed by an open retrospective on what the 24 hours were actually like. I mostly sat and watched the demos and Q&A — the AML workflow engine and the SA architecture assistant were the two that stuck with me most, since both leaned heavily on human-in-the-loop design instead of trying to automate everything end to end.

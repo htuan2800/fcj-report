@@ -12,7 +12,7 @@ pre : " <b> 5.2.1. </b> "
 * Select **Code** → **HTTPS**.
 * Copy the repository URL.
 
-![github](/images/5-Workshop/5.2-Prerequisite/sourceCode.png)
+![github](/fcj-report/images/5-Workshop/5.2-Prerequisite/sourceCode.png)
 
 ### 2. Clone the Source Code to Your Computer
 
@@ -23,4 +23,4 @@ pre : " <b> 5.2.1. </b> "
 git clone https://github.com/THL2410/SmartDocs.git
 ```
 
-![terminal](/images/5-Workshop/5.2-Prerequisite/terminalClone.png)
+![terminal](/fcj-report/images/5-Workshop/5.2-Prerequisite/terminalClone.png)

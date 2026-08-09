@@ -98,6 +98,24 @@ While watching the teams, I considered each question and compared my answer with
 
 The team competition demonstrated the importance of fast and effective communication. Teams sometimes had only a few seconds to discuss and agree on an answer. Because each member had strengths in a different area, assigning the right person and coordinating effectively were more valuable than relying on one individual's ability.
 
+### Event Photos
+
+<figure>
+  <img src="/fcj-report/images/event2_image1.jpeg" alt="Cloud Architect competition between two teams at the AWS office" style="width: 100%; height: auto;">
+  <figcaption>The Cloud Architect competition between KLKAT and Ngũ Đại Hiệp.</figcaption>
+</figure>
+
+<figure>
+  <img src="/fcj-report/images/event2_image3.jpeg" alt="Meet the Frontier Agent presentation at the event" style="width: 100%; height: auto;">
+  <figcaption>The “Meet the Frontier Agent” presentation and the use of AI agents in cybersecurity.</figcaption>
+</figure>
+
+<figure>
+  <img src="/fcj-report/images/event2_image2.jpeg" alt="Group photo at Cloud Architect x Meet up 11/07" style="width: 100%; height: auto;">
+  <figcaption>A group photo of attendees and organizers at the AWS office.</figcaption>
+</figure>
+
+
 ### Lessons Learned
 
 - Theory should be combined with practice and regular review; reading documentation alone is not enough without using the services directly.

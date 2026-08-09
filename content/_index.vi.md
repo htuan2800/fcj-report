@@ -8,17 +8,17 @@ chapter: false
 # Báo cáo thực tập
 
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Trần Lê Anh Phương
+&emsp; **Họ và tên:** Huỳnh Ngọc Tuấn 
 
-&emsp; **Số điện thoại:** 0389220454
+&emsp; **Số điện thoại:** 0938124402
 
-&emsp; **Email:** anhphuong260204@gmail.com
+&emsp; **Email:** huynhngoctuan48@gmail.com
 
 &emsp; **Trường:** Đại học Sài Gòn TP.HCM
 
 &emsp; **Ngành:** Công nghệ thông tin
 
-&emsp; **Lớp:** AWS062026
+&emsp; **Lớp:** DCT1222
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
@@ -26,7 +26,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 22/06/2026 đến ngày 15/08/2026
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](/fcj-report/images/avatar.png)
 
 
 

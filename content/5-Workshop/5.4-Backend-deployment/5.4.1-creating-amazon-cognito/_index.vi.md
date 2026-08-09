@@ -17,7 +17,7 @@ Amazon Cognito User Pool đóng vai trò như một thư mục người dùng đ
 
 *   **Bước 1 - Khởi tạo User Pool:** 
     Tiến hành tạo mới một User Pool trên giao diện AWS Cognito. Tại đây, cấu hình phương thức đăng nhập chính được chọn là **Email**, đồng thời thiết lập các tiêu chuẩn về mật khẩu (bắt buộc có ký tự đặc biệt, chữ hoa, số và độ dài tối thiểu) nhằm đảm bảo tính bảo mật cơ bản cho tài khoản người dùng.
-![Cognito User Pool](/images/5-Workshop/5.4-Backend-deployment/cognito.jpeg)
+![Cognito User Pool](/fcj-report/images/5-Workshop/5.4-Backend-deployment/cognito.jpeg)
 *   **Bước 2 - Cấu hình tính năng tự xác thực (Sign-up experience):** 
     Kích hoạt tính năng gửi mã xác thực qua email (Verification email) để đảm bảo tính hợp lệ của địa chỉ email khi người dùng đăng ký tài khoản mới. (như trên)
     

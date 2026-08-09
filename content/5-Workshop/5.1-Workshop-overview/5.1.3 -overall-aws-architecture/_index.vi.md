@@ -12,7 +12,7 @@ Sau khi tìm hiểu riêng kiến trúc Frontend và Backend ở 2 phần trư�
 
 Toàn bộ hệ thống được triển khai theo mô hình **serverless**, chia thành 4 lớp (khối) chức năng như trong sơ đồ kiến trúc:
 
-![](/images/5-Workshop/5.1-Workshop-overview/Structure.jpeg)
+![](/fcj-report/images/5-Workshop/5.1-Workshop-overview/Structure.jpeg)
 
 ##### a. Lớp Frontend & API
 

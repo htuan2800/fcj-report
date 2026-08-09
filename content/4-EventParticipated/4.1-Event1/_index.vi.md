@@ -98,6 +98,23 @@ Trong lúc theo dõi các đội thi đấu, em tự suy nghĩ và đối chiế
 
 Quan sát phần thi theo đội giúp em thấy rõ tầm quan trọng của giao tiếp nhanh và hiệu quả. Các đội đôi khi chỉ có vài giây để trao đổi và thống nhất câu trả lời. Mỗi thành viên có thế mạnh ở một lĩnh vực khác nhau, vì vậy việc phân công đúng người và phối hợp tốt có giá trị hơn năng lực riêng lẻ của một cá nhân.
 
+### Một Số Hình Ảnh Khi Tham Gia Sự Kiện
+
+<figure>
+  <img src="/fcj-report/images/event2_image1.jpeg" alt="Phần thi đấu Cloud Architect giữa hai đội tại văn phòng AWS" style="width: 100%; height: auto;">
+  <figcaption>Phần thi đấu Cloud Architect giữa hai đội KLKAT và Ngũ Đại Hiệp.</figcaption>
+</figure>
+
+<figure>
+  <img src="/fcj-report/images/event2_image3.jpeg" alt="Phần trình bày Meet the Frontier Agent tại sự kiện" style="width: 100%; height: auto;">
+  <figcaption>Phần giới thiệu “Meet the Frontier Agent” và ứng dụng AI agent trong bảo mật.</figcaption>
+</figure>
+
+<figure>
+  <img src="/fcj-report/images/event2_image2.jpeg" alt="Ảnh tập thể tại sự kiện Cloud Architect x Meet up 11/07" style="width: 100%; height: auto;">
+  <figcaption>Ảnh lưu niệm của người tham dự và ban tổ chức tại văn phòng AWS.</figcaption>
+</figure>
+
 ### Bài Học Rút Ra
 
 - Kiến thức lý thuyết cần đi cùng thực hành và ôn luyện; đọc tài liệu là chưa đủ nếu chưa trực tiếp sử dụng dịch vụ.

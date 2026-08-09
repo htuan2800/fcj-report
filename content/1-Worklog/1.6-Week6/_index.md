@@ -1,57 +1,30 @@
 ---
-title: "Week 6 Worklog"
+title: "Week 6 Log"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Review and revise the Workshop content (Section 5) regarding my assigned parts (Phase 2 - Vector Creation, Phase 3 - Q&A).
+* Update the Lambda Modules diagram to accurately reflect the actual implementation (`create-vector`, `vector-insert`, `vector-search`, `ChatbotRAG`).
+* Add missing test screenshots for the RAG chat feature to the System Testing section (5.5).
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Review and edit Workshop content for Phases 2 & 3 to ensure clarity and consistency with the team's shared terminology <br> - Add specific examples (code snippets for chunking, sample prompts) to sections that currently contain only general descriptions | 27/07/2026 | 27/07/2026 | |
+| Tue | - Review technical blog content related to RAG (where I contributed) and provide feedback to the team before posting to the AWS Study Group Facebook page | 28/07/2026 | 28/07/2026 | <https://www.facebook.com/groups/awsstudygroupfcj> |
+| Wed | - Updated the Lambda Modules architecture diagram on draw.io to reflect the actual implementation: fully mapped out the `create-vector` → `vector-insert` (VPC) and `ChatbotRAG` → `vector-search` (VPC) flows, and clearly marked the VPC boundaries <br> - Sent a preview to the team to confirm the diagram matches the actual deployment <br> - Captured missing test screenshots for the RAG chat feature (in-scope questions, out-of-scope questions, multi-document questions) and added them to the System Testing section (5.5) | 29/07/2026 | 29/07/2026 | <https://l2nt.github.io/AWS-Report-LeNguyenNhatTam/5-workshop/5.1-workshop-overview/5.1.3--overall-aws-architecture/> |
+| 5 | - Reviewed and revised the content of the assigned sections in the overall report; corrected spelling and phrasing errors; standardized table formatting and terminology with other sections of the report | 30/07/2026 | 30/07/2026 | |
+| 6 | - Continued adding missing content regarding the RAG pipeline (explained the rationale for choosing Titan Embed and the reasons for separating Lambda functions based on VPC) | 31/07/2026 | 31/07/2026 | |
+| 7 | - Conducted a final review of all assigned sections before the Workshop submission week | 01/08/2026 | 01/08/2026 | |
 
 
-### Week 6 Achievements:
+### Achievements in Week 6:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Reviewed and revised the content for Workshop Phases 2 and 3 to ensure greater clarity and consistency.
+* Provided feedback on the technical blog post regarding RAG prior to its publication to the community. * Updated the Lambda Modules diagram to reflect the actual implementation and verified it with the team.
+* Bổ sung đầy đủ các test cho phần chat RAG vào mục System Testing (5.5).
+* Reviewed, edited, and finalized the report content under my responsibility ahead of the Workshop submission week.

@@ -9,17 +9,17 @@ chapter: false
 # Internship Report
 
 ### Student Information:
-&emsp; **Full Name:** Tran Le Anh Phuong
+&emsp; **Full Name:** Huynh Ngoc Tuan
 
-&emsp; **Phone Number:** 0389220454 
+&emsp; **Phone Number:** 0938124402 
 
-&emsp; **Email:** anhphuong260204@gmail.com
+&emsp; **Email:** huynhngoctuan48@gmail.com
 
 &emsp; **University:** Sai Gon University
 
 &emsp; **Major:** Information Technology
 
-&emsp; **Class:** AWS062026
+&emsp; **Class:** DCT1222
 
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
@@ -27,7 +27,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 22/06/2025 to 15/08/2025
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture](/fcj-report/images/avatar.png)
 
 ### Report Content
 

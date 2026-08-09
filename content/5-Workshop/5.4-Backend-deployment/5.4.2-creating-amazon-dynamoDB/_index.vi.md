@@ -16,9 +16,9 @@ pre: "<b> 5.4.2 </b>"
 1. Mở Amazon DynamoDB.
 2. Chọn Create Table.
 3. Nhập tên bảng, cấu hình Partition Key và Sort Key. Thiết lập đúng các key của từng table.
-![DynamoDB table active](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/12.png)
+![DynamoDB table active](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/12.png)
 4. Tạo bảng và chờ trạng thái Active.
-![DynamoDB table active](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/11.png)
+![DynamoDB table active](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/11.png)
 
 ## Thiết kế dữ liệu
 
@@ -51,14 +51,14 @@ Các bảng được thiết kế như sau:
 1. Mở **AWS Management Console**.
 2. Tìm và chọn dịch vụ **Amazon DynamoDB**.
 3. Trong menu bên trái, chọn **Tables**.
-![DynamoDB](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/1.png)
+![DynamoDB](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/1.png)
 
 4. Chọn **Create table**.
 5. Nhập tên bảng tại mục **Table name**.
 6. Nhập **Partition key** theo thiết kế của từng bảng.
 7. Với bảng `ChatHistory-dev`, nhập thêm **Sort key** là:
-![DynamoDB](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/2.png)
-![DynamoDB](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/3.png)
+![DynamoDB](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/2.png)
+![DynamoDB](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/3.png)
 8. Chọn **Create table**.
 
 
@@ -75,7 +75,7 @@ messageKey
 | `createdAt` | Thời gian tạo |
 | `updatedAt` | Thời gian cập nhật |
 ```
-![DynamoDB sample item](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/4.png)
+![DynamoDB sample item](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/4.png)
 
 ## Kiểm tra bảng
 
@@ -86,7 +86,7 @@ messageKey
 
 > **Kết quả mong đợi:** Dữ liệu của mỗi phiên có thể được truy vấn và sắp xếp theo thời gian.
 
-![DynamoDB explore items](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/5.png)
+![DynamoDB explore items](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/5.png)
 
 ## Kiểm tra dữ liệu
 Kiểm tra dữ liệu DynamoDb
@@ -94,11 +94,11 @@ Kiểm tra dữ liệu DynamoDb
 2. Chọn Table kiểm tra `ChatHistory-dev`.
 3. Chọn setting ở ChatHistory-dev - Items returned.
 
-![DynamoDB table active](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/13.png)
+![DynamoDB table active](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/13.png)
 
 Kiểm tra dữ liệu RDS
 1. Mở AWS lambda.
 2. Sau khi hoàn thành lambda rds-init-dev -> Deploy-> Test.
 3. Data = `{}` -> Test.
 
-![DynamoDB table active](/images/5-Workshop/5.4-Backend-deployment/DynamoDb/14.png)
+![DynamoDB table active](/fcj-report/images/5-Workshop/5.4-Backend-deployment/DynamoDb/14.png)

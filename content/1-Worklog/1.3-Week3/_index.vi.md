@@ -1,35 +1,30 @@
 ---
-title: "Worklog Tuần 3"
-date: 2026-08-08
-weight: 3
+title: "Nhật ký Tuần 3"
+date: 2024-01-01
+weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
+### Mục tiêu tuần 3:
 
-**Thời gian:** Từ ngày **06/07/2026** đến ngày **11/07/2026**
-
-### Mục tiêu Tuần 3:
-
-* Tìm hiểu sâu hơn về Amazon S3, AWS Lambda và Amazon Textract trong quy trình xử lý tài liệu.
-* Thiết kế và thử nghiệm luồng tiếp nhận tài liệu trên Amazon S3.
-* Xây dựng Lambda nhận sự kiện tải tệp, kiểm tra dữ liệu đầu vào và gọi Amazon Textract.
+* Code Lambda `create-vector`: nhận văn bản đã OCR, gọi Amazon Bedrock để tạo Vector Embeddings (Giai đoạn 2 được phân công).
+* Phối hợp với nhóm hoàn thiện sơ đồ Kiến trúc Tổng quan trên AWS dùng ở Proposal và mục 5.1.3.
+* Rà soát tiến độ, test chéo các phần liên quan (flow xác thực Frontend) do đồng đội thực hiện.
 
 ### Các công việc cần triển khai trong tuần này:
-
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|---|---|---|---|---|
-| 2 | - Tìm hiểu lại cấu trúc bucket, object key, prefix và metadata trên Amazon S3<br>- Thiết kế thư mục logic để phân biệt tài liệu gốc, dữ liệu đang xử lý và kết quả đầu ra | 06/07/2026 | 06/07/2026 | [Amazon S3](https://docs.aws.amazon.com/s3/) |
-| 3 | - Tìm hiểu S3 Event Notification và cách kích hoạt Lambda khi có tài liệu mới<br>- Cấu hình trigger theo prefix và loại sự kiện để tránh Lambda bị gọi ngoài ý muốn | 07/07/2026 | 07/07/2026 | [S3 Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/userguide/EventNotifications.html) |
-| 4 | - Học cấu trúc dữ liệu của một S3 event<br>- Viết Lambda đọc bucket, object key, kích thước và metadata của tệp vừa tải lên<br>- Kiểm tra quyền IAM để Lambda chỉ được truy cập các tài nguyên cần thiết | 08/07/2026 | 08/07/2026 | [Using Lambda with S3](https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html) |
-| 5 | - Kiểm tra phần mở rộng và giới hạn định dạng tệp được hỗ trợ<br>- Xử lý object key được URL encode và tên tệp có khoảng trắng hoặc ký tự tiếng Việt<br>- Bổ sung kiểm tra dữ liệu đầu vào trước khi chuyển sang bước OCR | 09/07/2026 | 09/07/2026 | |
-| 6 | - Tìm hiểu API đồng bộ của Amazon Textract<br>- Thử gọi Textract từ Lambda với ảnh PNG/JPEG mẫu và đọc các block PAGE, LINE, WORD trong phản hồi | 10/07/2026 | 10/07/2026 | [Amazon Textract API](https://docs.aws.amazon.com/textract/latest/dg/API_Reference.html) |
-| 7 | - Lưu kết quả Textract thô vào khu vực output trên S3<br>- Kiểm tra CloudWatch Logs để theo dõi từng bước xử lý<br>- Tổng kết thử nghiệm và ghi nhận các vấn đề cần giải quyết với PDF nhiều trang | 11/07/2026 | 11/07/2026 | [CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/) |
+| --- | --- | --- | --- | --- |
+| 2-3 | - Code Lambda `create-vector`: nhận chuỗi văn bản (đầu ra từ Textract), chia nhỏ thành các đoạn (chunk) theo kích thước ký tự cố định có overlap <br> - Viết hàm gọi API `InvokeModel` của Amazon Bedrock (Titan Embed) cho từng chunk, xử lý response trả về vector 1.024 chiều <br> - Test thủ công với một tài liệu PDF mẫu, kiểm tra số lượng chunk và vector sinh ra có khớp không | 06/07/2026 | 07/07/2026 | [Amazon Bedrock – Titan Embeddings](https://docs.aws.amazon.com/bedrock/latest/userguide/titan-embedding-models.html) |
+| 4 | - Phối hợp cùng nhóm hoàn thiện sơ đồ Kiến trúc Tổng quan trên AWS (mục 5.1.3), tập trung vẽ đúng luồng 2 Lambda mình phụ trách (`create-vector`, và Lambda tìm kiếm ngữ nghĩa dự kiến ở tuần sau) trong khối "Cổng giao tiếp & Điều phối" <br> - Đối chiếu sơ đồ với AWS Well-Architected Framework, xác nhận việc tách Lambda gọi Bedrock (không VPC) và Lambda insert RDS (có VPC) là hợp lý về chi phí | 08/07/2026 | 08/07/2026 | [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) |
+| 5 | - Viết Lambda `vector-insert` (đặt trong VPC) nhận vector từ `create-vector` qua `lambda_client.invoke()`, ghi vào bảng `document_chunks` trên RDS PostgreSQL (`pgvector`) <br> - Test insert với vector giả lập, kiểm tra dữ liệu lưu đúng định dạng `vector(1024)` | 09/07/2026 | 09/07/2026 | |
+| 6 | - Rà soát và test flow xác thực Frontend do đồng đội làm (Login/Register/Protected Route) để đảm bảo JWT trả về đúng định dạng, phục vụ việc Lambda phía AI sẽ xác thực request sau này <br> - Ghi nhận vấn đề lỗi lẫn session giữa các tab để nhóm fix ở tuần sau (không thuộc phạm vi Lambda AI nhưng ảnh hưởng gián tiếp tới việc test end-to-end) | 10/07/2026 | 10/07/2026 | |
+| 7 | - Tham gia sự kiện cộng đồng "Cloud Architect x Meet Up" | 11/07/2026 | 11/07/2026 | |
+
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu cách S3 Event Notification kích hoạt Lambda trong kiến trúc hướng sự kiện.
-* Hoàn thành luồng thử nghiệm từ thao tác tải tệp đến Lambda và Textract.
-* Trích xuất thành công văn bản từ ảnh thử nghiệm.
-* Lưu được kết quả thô trên Amazon S3.
-* Bổ sung bước giải mã object key để xử lý tên tệp có khoảng trắng.
-* Giới hạn trigger bằng prefix để tránh vòng lặp khi Lambda ghi kết quả.
+* Hoàn thành Lambda `create-vector`: chia chunk văn bản và gọi Amazon Bedrock tạo vector embedding thành công.
+* Hoàn thành Lambda `vector-insert` (chạy trong VPC), ghi vector vào RDS PostgreSQL (`pgvector`) qua cơ chế invoke đồng bộ giữa 2 Lambda.
+* Phối hợp hoàn thiện sơ đồ Kiến trúc Tổng quan trên AWS dùng ở Proposal và mục 5.1.3, đảm bảo phản ánh đúng phần Lambda mình phụ trách.
+* Rà soát flow xác thực Frontend, xác nhận định dạng JWT phù hợp để tích hợp ở các Lambda AI/RAG.
+* Tham gia sự kiện "Cloud Architect x Meet Up" (11/07/2026).

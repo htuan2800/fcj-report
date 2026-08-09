@@ -18,9 +18,9 @@ Trong quá trình thực tập, em đã tham gia hai sự kiện. Hai sự kiệ
 
 
 ### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** Cloud Architect x Meet up 11/07/2026
+&emsp;**Tên sự kiện:** FCAJ x Agentic AI Build Week powered by GenAI Fund 
 
-&emsp;**Thời gian:** Ngày 11/07/2026
+&emsp;**Thời gian:** Ngày 25/07/2026
 
 &emsp;**Địa điểm:** Văn phòng AWS, TP. Hồ Chí Minh
 

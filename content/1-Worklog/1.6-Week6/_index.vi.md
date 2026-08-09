@@ -1,36 +1,31 @@
 ---
-title: "Worklog Tuần 6"
-date: 2026-08-08
-weight: 6
+title: "Nhật ký Tuần 6"
+date: 2024-01-01
+weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
+### Mục tiêu tuần 6:
 
-**Thời gian:** Từ ngày **27/07/2026** đến ngày **01/08/2026**
-
-### Mục tiêu Tuần 6:
-
-* Tăng khả năng giám sát và xử lý lỗi của pipeline.
-* Rà soát quyền IAM, bảo mật dữ liệu và chi phí vận hành.
-* Nghiên cứu Amazon CloudWatch và viết bài chia sẻ.
-* Kiểm thử hệ thống trước khi triển khai phiên bản hoàn chỉnh.
+* Rà soát và chỉnh sửa lại nội dung Workshop (mục 5) liên quan tới phần mình phụ trách (Giai đoạn 2 - Tạo vector, Giai đoạn 3 - Hỏi đáp).
+* Cập nhật sơ đồ Lambda Modules cho đúng thực tế triển khai (`create-vector`, `vector-insert`, `vector-search`, `ChatbotRAG`).
+* Bổ sung ảnh chụp test còn thiếu cho phần chat RAG vào mục System Testing (5.5).
 
 ### Các công việc cần triển khai trong tuần này:
-
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-|---|---|---|---|---|
-| 2 | - Chuẩn hóa CloudWatch Logs của Lambda theo document ID, trạng thái và bước xử lý<br>- Bổ sung thông tin log cần thiết để dễ tìm nguyên nhân khi xảy ra lỗi | 27/07/2026 | 27/07/2026 | [CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/) |
-| 3 | - Thiết kế dashboard theo dõi số tài liệu đã xử lý, số lần lỗi và thời gian xử lý trung bình<br>- Tìm hiểu cách lựa chọn metric hữu ích cho pipeline Serverless | 28/07/2026 | 28/07/2026 | [CloudWatch Dashboards](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html) |
-| 4 | - Thiết lập cảnh báo thử nghiệm cho Lambda error, timeout và thời gian xử lý bất thường<br>- Kiểm tra cách nhận thông báo khi metric vượt ngưỡng | 29/07/2026 | 29/07/2026 | [CloudWatch Alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) |
-| 5 | - Bổ sung cơ chế retry có kiểm soát<br>- Tìm hiểu dead-letter queue và phương án xử lý sự kiện thất bại mà không làm mất tài liệu | 30/07/2026 | 30/07/2026 | |
-| 6 | - Rà soát IAM theo nguyên tắc least privilege, mã hóa dữ liệu trên S3 và thông tin được phép ghi vào log<br>- Kiểm thử lại toàn bộ luồng từ tải tệp đến dữ liệu đầu ra trước khi triển khai | 31/07/2026 | 31/07/2026 | |
-| 7 | - Viết bài “Làm chủ giám sát hệ thống Serverless với Amazon CloudWatch” | 01/08/2026 | | |
+| --- | --- | --- | --- | --- |
+| 2 | - Rà soát và chỉnh sửa nội dung mục Workshop phần Giai đoạn 2 & Giai đoạn 3 cho rõ ràng, nhất quán với thuật ngữ chung của nhóm <br> - Bổ sung ví dụ cụ thể (đoạn code chunking, câu Prompt mẫu) vào phần còn mô tả chung chung | 27/07/2026 | 27/07/2026 | |
+| 3 | - Rà soát lại nội dung Blog kỹ thuật liên quan tới RAG (nếu có phần mình đóng góp), góp ý cùng nhóm trước khi đăng lên Facebook AWS Study Group | 28/07/2026 | 28/07/2026 | <https://www.facebook.com/groups/awsstudygroupfcj> |
+| 4 | - Cập nhật sơ đồ kiến trúc Lambda Modules trên draw.io cho đúng thực tế: bổ sung đầy đủ luồng `create-vector` → `vector-insert` (VPC) và `ChatbotRAG` → `vector-search` (VPC), đánh dấu rõ ranh giới VPC <br> - Gửi bản xem trước cho nhóm xác nhận sơ đồ khớp với thực tế triển khai <br> - Chụp lại màn hình test còn thiếu cho phần chat RAG (câu hỏi trong phạm vi tài liệu, câu hỏi ngoài phạm vi, câu hỏi nhiều tài liệu) bổ sung vào mục System Testing (5.5) | 29/07/2026 | 29/07/2026 | <https://l2nt.github.io/AWS-Report-LeNguyenNhatTam/5-workshop/5.1-workshop-overview/5.1.3--overall-aws-architecture/> |
+| 5 | - Rà soát và chỉnh sửa lại nội dung báo cáo tổng thể phần mình phụ trách, sửa lỗi chính tả và diễn đạt, thống nhất định dạng bảng/thuật ngữ với các phần khác trong báo cáo | 30/07/2026 | 30/07/2026 | |
+| 6 | - Tiếp tục bổ sung các phần nội dung còn thiếu liên quan tới pipeline RAG (giải thích lý do chọn Titan Embed, lý do tách Lambda theo VPC) | 31/07/2026 | 31/07/2026 | |
+| 7 | - Rà soát lại toàn bộ phần mình phụ trách lần cuối trước khi bước sang tuần nộp Workshop | 01/08/2026 | 01/08/2026 | |
+
 
 ### Kết quả đạt được tuần 6:
 
-* Pipeline có log nhất quán và dễ truy vết hơn.
-* Xác định các metrics và cảnh báo quan trọng.
-* Bổ sung phương án retry và xử lý sự kiện thất bại.
-* Rà soát quyền IAM và nguyên tắc bảo vệ tài liệu.
-* Hoàn thành kiểm thử luồng xử lý để chuẩn bị triển khai hệ thống trong tuần 7.
-* Hoàn thành bài blog kỹ thuật về Amazon CloudWatch.
+* Rà soát và chỉnh sửa nội dung mục Workshop phần Giai đoạn 2 & Giai đoạn 3 cho rõ ràng, nhất quán hơn.
+* Góp ý nội dung Blog kỹ thuật liên quan tới RAG trước khi đăng lên cộng đồng.
+* Cập nhật sơ đồ Lambda Modules đúng thực tế triển khai, đã đối chiếu với nhóm.
+* Bổ sung đầy đủ các test cho phần chat RAG vào mục System Testing (5.5).
+* Rà soát, chỉnh sửa và hoàn thiện phần nội dung báo cáo do mình phụ trách trước khi bước sang tuần nộp Workshop.

@@ -17,7 +17,7 @@ Amazon Cognito User Pool acts as a fully managed user directory on the AWS platf
 
 *   **Step 1 - Create User Pool:**
 Create a new User Pool via the AWS Cognito interface. Configure **Email** as the primary sign-in method and establish password standards (requiring special characters, uppercase letters, numbers, and a minimum length) to ensure basic account security.
-![Cognito User Pool](/images/5-Workshop/5.4-Backend-deployment/cognito.jpeg)
+![Cognito User Pool](/fcj-report/images/5-Workshop/5.4-Backend-deployment/cognito.jpeg)
 *   **Step 2 - Configure Sign-up Experience:**
 Enable the email verification feature to validate email addresses when users register for new accounts. (as shown above)
 
