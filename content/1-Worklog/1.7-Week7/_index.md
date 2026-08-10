@@ -9,15 +9,15 @@ Period: From August 3, 2026, to August 8, 2026
 
 ### Week 7 Objectives:
 
-* Finalize and submit the Workshop report to the system, ensuring the content for Phase 2 & Phase 3 (AI & RAG components) is presented fully and accurately.
-* Complete the graduation internship report for university grading and obtain the company's confirmation and stamp.
+* Finalize and submit the Workshop report to the system, ensuring the AI ​​& RAG section is presented comprehensively and accurately.
+* Complete the graduation internship report for university grading and obtain the company's verification and stamp.
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Materials |
 | --- | --- | --- | --- | --- |
-| Mon-Sat | - Final review of the Workshop content I am responsible for (Phase 2 - Vector creation; Phase 3 - Q&A & Lambda Modules diagram) before submission <br> - Submit the Workshop report to the system <br> - Complete the internship report | 03/08/2026 | 08/08/2026 | |
+| Mon-Sat | - Final review of the Workshop content I am responsible for (Vector creation; Q&A & Lambda Modules diagram) before submission <br> - Submit the Workshop report to the system <br> - Complete the internship report | 03/08/2026 | 08/08/2026 | |
 
 ### Week 7 Achievements:
 
-* Successfully submitted the Workshop report to the system on time; AI & RAG content was fully presented.
+* Successfully submitted the Workshop report to the system on time; the AI ​​& RAG content was presented comprehensively.
 * Completed the graduation internship report.

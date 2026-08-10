@@ -9,7 +9,7 @@ pre: " <b> 1.4. </b> "
 
 * Code Lambda tìm kiếm ngữ nghĩa (`vector-search`): đối chiếu vector câu hỏi với vector tài liệu trong RDS.
 * Thiết kế Prompt chuẩn để ép LLM chỉ trả lời dựa trên tài liệu cung cấp, không bịa đặt thông tin.
-* Cấu hình VPC cho Lambda ở Giai đoạn 3 để có thể truy vấn được RDS (`pgvector`) — ghi chú **CẦN VPC** từ bảng phân công.
+* Cấu hình VPC cho Lambda ở phần hỏi đáp để có thể truy vấn được RDS (`pgvector`) — ghi chú **CẦN VPC** từ bảng phân công.
 * Phối hợp fix lỗi multi-tenancy ảnh hưởng tới dữ liệu vector theo từng người dùng.
 
 ### Các công việc cần triển khai trong tuần này:
@@ -25,7 +25,7 @@ pre: " <b> 1.4. </b> "
 ### Kết quả đạt được tuần 4:
 
 * Hoàn thành Lambda `vector-search`: tạo vector câu hỏi và tìm kiếm ngữ nghĩa (cosine similarity) trong RDS PostgreSQL.
-* Cấu hình thành công VPC cho Lambda Giai đoạn 3 để truy vấn được RDS (`pgvector`), xác nhận không phát sinh thêm chi phí NAT Gateway.
+* Cấu hình thành công VPC cho Lambda ở phần hỏi đáp để truy vấn được RDS (`pgvector`), xác nhận không phát sinh thêm chi phí NAT Gateway.
 * Thiết kế và test Prompt chuẩn giúp LLM trả lời bám sát tài liệu, hạn chế bịa đặt thông tin ngoài ngữ cảnh.
 * Phối hợp fix lỗi rò rỉ dữ liệu đa người dùng ở phần truy vấn vector, đảm bảo cách ly dữ liệu theo từng người dùng.
 * Chạy thử thành công luồng hỏi đáp RAG end-to-end lần đầu tiên (ChatbotRAG → vector-search → Bedrock LLM).

@@ -20,7 +20,7 @@ pre: " <b> 1.5. </b> "
 | 4 | - Evaluate switching the Bedrock model used for response generation (try `amazon.nova-lite-v1:0`); compare quality and latency against the previous model using the same set of sample questions <br> - Update the prompt to align with the new model's input/output format | 22/07/2026 | 22/07/2026 | |
 | 5 | - Review and refine the prompt: add instructions to cite source document names in responses; handle cases where no relevant chunk is found (respond with "no information in documents" instead of attempting an answer) <br> - Retest 10 edge-case questions (ambiguous questions, out-of-scope questions, questions requiring synthesis from multiple documents) | 23/07/2026 | 23/07/2026 | |
 | 6 | - Write automated tests (pytest) for assigned functions: chunking, cosine similarity calculation, and prompt building — integrate into the CodePipeline testing stage <br> - Ensure the test stage halts early if the Lambda AI/RAG test suite fails, preventing the image build | 24/07/2026 | 24/07/2026 | [Build specification reference – CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html) |
-| 7 | - Team meeting: review progress; peer-review and provide feedback on the report I authored (sections for Phase 2 and Phase 3) <br> - Participate in the "FCAJ x Agentic AI Build Week powered by GenAI Fund" hackathon | 25/07/2026 | July 25, 2026 | |
+| 7 | - Team meeting: review progress; peer-review and provide feedback on the report I authored <br> - Participate in the "FCAJ x Agentic AI Build Week powered by GenAI Fund" hackathon | 25/07/2026 | July 25, 2026 | |
 
 
 ### Week 5 Achievements:

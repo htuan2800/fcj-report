@@ -17,10 +17,10 @@ This page summarizes the work completed during the eight-week internship (from *
 [Researching Vector Stores, Amazon Bedrock & Authentication](1.2-week2/)
 
 * **Week 3 (06/07/2026 - 11/07/2026):**<br>
-[Phase 2 Implementation (Vector Creation) & Architecture Finalization](1.3-week3/)
+[Vector Generation & High-Level Architecture Finalization](1.3-week3/)
 
 * **Week 4 (13/07/2026 - 18/07/2026):**<br>
-[Phase 3 Implementation (Semantic Search & Prompting) & VPC Configuration](1.4-week4/)
+[Semantic Search Implementation, Prompting & VPC Configuration](1.4-week4/)
 
 * **Week 5 (20/07/2026 - 25/07/2026):**<br>
 [RAG Quality Tuning, Lambda Monitoring & Bedrock Cost Optimization](1.5-week5/)

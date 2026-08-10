@@ -19,10 +19,10 @@ Trong dự án, tôi phụ trách luồng tiếp nhận và xử lý tài liệu
   [Nghiên cứu Vector Store, Amazon Bedrock & Xác thực](1.2-week2/)
 
 * **Tuần 3 (06/07/2026 - 11/07/2026):**<br>
-  [Triển khai Giai đoạn 2 (Tạo Vector) & Hoàn thiện Kiến trúc Tổng quan](1.3-week3/)
+  [Triển khai tạo Vector & Hoàn thiện Kiến trúc Tổng quan](1.3-week3/)
 
 * **Tuần 4 (13/07/2026 - 18/07/2026):**<br>
-  [Triển khai Giai đoạn 3 (Tìm kiếm ngữ nghĩa & Prompt) & Cấu hình VPC](1.4-week4/)
+  [Triển khai tìm kiếm ngữ nghĩa & Prompt & Cấu hình VPC](1.4-week4/)
 
 * **Tuần 5 (20/07/2026 - 25/07/2026):**<br>
   [Tinh chỉnh chất lượng RAG, Giám sát Lambda & Tối ưu chi phí Bedrock](1.5-week5/)

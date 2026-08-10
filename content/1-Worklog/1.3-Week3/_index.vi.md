@@ -7,7 +7,7 @@ pre: " <b> 1.3. </b> "
 ---
 ### Mục tiêu tuần 3:
 
-* Code Lambda `create-vector`: nhận văn bản đã OCR, gọi Amazon Bedrock để tạo Vector Embeddings (Giai đoạn 2 được phân công).
+* Code Lambda `create-vector`: nhận văn bản đã OCR, gọi Amazon Bedrock để tạo Vector Embeddings.
 * Phối hợp với nhóm hoàn thiện sơ đồ Kiến trúc Tổng quan trên AWS dùng ở Proposal và mục 5.1.3.
 * Rà soát tiến độ, test chéo các phần liên quan (flow xác thực Frontend) do đồng đội thực hiện.
 

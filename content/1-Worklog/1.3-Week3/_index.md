@@ -7,7 +7,7 @@ pre: " <b> 1.3. </b> "
 ---
 ### Week 3 Objectives:
 
-*   Code the `create-vector` Lambda function: receive OCR-processed text and call Amazon Bedrock to generate vector embeddings (assigned Phase 2 task).
+*   Code the `create-vector` Lambda function: receive OCR-processed text and call Amazon Bedrock to generate vector embeddings.
 *   Collaborate with the team to finalize the AWS Overall Architecture diagram for use in the Proposal and section 5.1.3.
 *   Review progress and perform cross-testing on related components (e.g., the frontend authentication flow) implemented by teammates.
 

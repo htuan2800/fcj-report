@@ -20,7 +20,7 @@ pre: " <b> 1.5. </b> "
 | 4 | - Đánh giá đổi model Bedrock cho phần sinh câu trả lời (thử `amazon.nova-lite-v1:0`), so sánh chất lượng và độ trễ với model cũ trên cùng bộ câu hỏi mẫu <br> - Cập nhật lại Prompt cho phù hợp với định dạng input/output của model mới | 22/07/2026 | 22/07/2026 | |
 | 5 | - Rà soát và tinh chỉnh lại Prompt: bổ sung hướng dẫn trích dẫn tên tài liệu nguồn khi trả lời, xử lý trường hợp không tìm thấy chunk liên quan (trả lời "không có thông tin trong tài liệu" thay vì cố trả lời) <br> - Test lại 10 câu hỏi biên (câu hỏi mơ hồ, câu hỏi ngoài phạm vi, câu hỏi yêu cầu tổng hợp nhiều tài liệu) | 23/07/2026 | 23/07/2026 | |
 | 6 | - Viết bộ test tự động (pytest) cho các hàm thuộc phạm vi mình phụ trách: hàm chia chunk, hàm tính cosine similarity, hàm build Prompt — tích hợp vào bước test của CodePipeline <br> - Đảm bảo bước test dừng sớm nếu bộ test của Lambda AI/RAG thất bại, trước khi build image | 24/07/2026 | 24/07/2026 | [Build specification reference – CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html) |
-| 7 | - Họp nhóm: rà soát tiến độ, đọc chéo và góp ý phần báo cáo do mình viết (mục Giai đoạn 2, Giai đoạn 3) <br> - Tham gia hackathon "FCAJ x Agentic AI Build Week powered by GenAI Fund" | 25/07/2026 | 25/07/2026 | |
+| 7 | - Họp nhóm: rà soát tiến độ, đọc chéo và góp ý phần báo cáo do mình viết <br> - Tham gia hackathon "FCAJ x Agentic AI Build Week powered by GenAI Fund" | 25/07/2026 | 25/07/2026 | |
 
 
 ### Kết quả đạt được tuần 5:
