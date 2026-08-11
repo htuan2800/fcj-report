@@ -69,3 +69,9 @@ pre: " <b> 4.2. </b> "
 ### Event Experience
 
 This was the closing/demo day of a hackathon rather than a talk-style event, so most of the day was four teams pitching back-to-back, followed by an open retrospective on what the 24 hours were actually like. I mostly sat and watched the demos and Q&A — the AML workflow engine and the SA architecture assistant were the two that stuck with me most, since both leaned heavily on human-in-the-loop design instead of trying to automate everything end to end.
+
+### Event Photos
+
+<figure>
+  <img src="/fcj-report/images/event2_image1.jpg" alt=" style="width: 100%; height: auto;">
+</figure>

@@ -69,3 +69,9 @@ pre: " <b> 4.2. </b> "
 ### Trải nghiệm trong event
 
 Đây là buổi tổng kết/demo day của một hackathon chứ không phải buổi chia sẻ kiểu hội thảo, nên gần như cả buổi là 4 đội pitch nối tiếp nhau, sau đó là phần chia sẻ mở về hành trình 24 giờ vừa qua. Tôi chủ yếu ngồi xem phần demo và Q&A — ấn tượng nhất là hệ thống chống rửa tiền của Six Piller và trợ lý kiến trúc của Long & Co, vì cả hai đều thiết kế theo hướng con người vẫn duyệt lại trước khi hành động, thay vì để AI tự động hoàn toàn.
+
+### Một Số Hình Ảnh Khi Tham Gia Sự Kiện
+
+<figure>
+  <img src="/fcj-report/images/event2_image1.jpg" alt=" style="width: 100%; height: auto;">
+</figure>
